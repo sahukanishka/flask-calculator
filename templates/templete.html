@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+<style>
+    .alert{
+        background:green;
+        padding: 1rem;
+        border-radius: 5px;
+        color: white;
+        margin: 1rem;
+    }
+</style>
 </head>
 <body>
    <div class="container">
@@ -27,7 +36,7 @@
             <label for="Number two">Second Number</label>  
             <input 
             type="text"
-            name="=num2"
+            name="num2"
             placeholder="Second Number"
             id=""
             class="u-full-width"
@@ -36,13 +45,18 @@
             <label for="Operation">Operation</label>
             <select class="u-full-width" name="operation" id="">
                 <option value="add">Add</option>
-                <option value="subtract">Subtract</option>
-                <option value="Multiply">Multiply</option>
-                <option value="divide">Divide</option>
+                <option value="substract">Subtract</option>
+                <option value="multiply">Multiply</option>
+                <option value="devide">Divide</option>
             </select>
             <input type="submit" value="Calculator" id="calc_btn">
         </form>
-        
+
+      <div class="alert">
+          <h6>Answer is </h6>
+          {{sum}}
+
+      </div>
     </div>
    
 </body>
